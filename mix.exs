@@ -3,6 +3,7 @@ defmodule TestingWithPhoenix.Mixfile do
 
   def project do
     [app: :testing_with_phoenix,
+     preferred_cli_env: [espec: :test],
      version: "0.0.1",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -37,7 +38,8 @@ defmodule TestingWithPhoenix.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:espec_phoenix, "~> 0.6.0", only: :test, app: false}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
