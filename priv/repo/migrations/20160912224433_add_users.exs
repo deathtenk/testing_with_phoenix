@@ -8,7 +8,8 @@ defmodule TestingWithPhoenix.Repo.Migrations.AddUsers do
         add :name, :string
         add :username, :string
         add :password, :string
-      
+        
+        unique_index(:users, [:username])
       timestamps
     end
   end

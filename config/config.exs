@@ -5,6 +5,14 @@
 # is restricted to this project.
 use Mix.Config
 
+config :testing_with_phoenix, TestingWithPhoenix.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "testing_with_phoenix_repo",
+  username: "user",
+  password: "pass",
+  hostname: "localhost"
+
+
 # General application configuration
 config :testing_with_phoenix,
   ecto_repos: [TestingWithPhoenix.Repo]

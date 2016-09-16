@@ -17,5 +17,6 @@ defmodule TestingWithPhoenix.User do
     |> cast(params, [:name, :username, :password])
     |> validate_required([:name, :username, :password])
     |> validate_length(:username, max: 20)
+    |> unique_constraint(:username)
   end
 end
